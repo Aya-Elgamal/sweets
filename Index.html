@@ -1,0 +1,83 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>MyCake</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="main">
+    <nav>
+        <div class="logo">
+            <img src="images/logo4.png">
+        </div>
+        <div class="nav-links">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Cakes</a></li>
+                <li><a href="#">Parties</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Locate us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="information">
+        <div class="overlay"></div>
+        <img src="images/bigcake.png" class="cakes">        
+        <div id="circle">
+            <div class="feature one">
+                <img src="images/swissroll.png">
+                <div>
+                    <h1>Swiss Roll</h1>
+                    <p>Sweet Sweet Sweet</p>
+                </div>
+            </div>
+            <div class="feature two">
+                <img src="images/birthdaycakes.png">
+                <div>
+                    <h1>Birthday Cakes</h1>
+                    <p>Sweet Sweet Sweet</p>
+                </div>
+            </div>
+            <div class="feature three">
+                <img src="images/Croissant.png">
+                <div>
+                    <h1>Bakery</h1>
+                    <p>Sweet Sweet Sweet</p>
+                </div>
+            </div>
+            <div class="feature four">
+                <img src="images/logo1.png">
+                <div>
+                    <h1>CupCakes</h1>
+                    <p>Sweet Sweet Sweet</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="controls">
+        <img src="images/left.png" id="up">
+        <h3>Browse</h3>
+        <img src="images/left.png" id="down">
+
+    </div>
+</div>
+    <script>
+        var circle = document.getElementById("circle");
+        var up = document.getElementById("up");
+        var down = document.getElementById("down");
+        var rotateValue = circle.style.transform;
+        var rotateSum;
+        up.onclick = function(){
+            rotateSum = rotateValue + "rotate(-90deg)";
+            circle.style.transform = rotateSum;
+            rotateValue = rotateSum;
+        }
+        down.onclick = function(){
+            rotateSum = rotateValue + "rotate(90deg)";
+            circle.style.transform = rotateSum;
+            rotateValue = rotateSum;
+        }
+    </script>
+</body>
+</html>
